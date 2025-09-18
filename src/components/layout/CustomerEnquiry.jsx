@@ -18,42 +18,42 @@ const CustomerEnquiry = () => {
         <form className="mx-auto lg:w-[80%]">
           
         <div className=" flex lg:gap-4 lg:flex-row flex-col  ">
-            <div className="border border-gray-300 w-full bg-white rounded-lg flex gap-3 items-center px-4 mt-5 focus-within:border-purple-600 transition">
-            <User className="text-gray-500" />
+            <div className="border border-gray-300 w-full bg-gray-400 placeholder-white text-white rounded-lg flex gap-3 items-center px-4 mt-5  transition">
+            <User className="text-white" />
             <input
               type="text"
               placeholder="Your Name"
-              className="font-poppins   font-normal bg-transparent w-full py-3 outline-none"
+              className="font-poppins   placeholder-white  font-normal bg-transparent w-full py-3 outline-none"
             />
           </div>
 
           
-          <div className="border border-gray-300 w-full bg-white rounded-lg flex gap-3 items-center px-4 mt-5 focus-within:border-purple-600 transition">
-            <Mail className="text-gray-500" />
+          <div className="border border-gray-300 w-full bg-gray-400 rounded-lg flex gap-3 items-center px-4 mt-5  transition">
+            <Mail className="text-white" />
             <input
               type="email"
               placeholder="Your Email"
-              className="font-poppins  font-normal bg-transparent w-full py-3 outline-none"
+              className="font-poppins  placeholder-white font-normal bg-transparent w-full py-3 outline-none"
             />
           </div></div>        
 
           {/* Phone */}
-          <div className="border border-gray-300 rounded-lg bg-white flex gap-3 items-center px-4 mt-5 focus-within:border-purple-600 transition">
-            <Phone className="text-gray-500" />
+          <div className="border border-gray-300 rounded-lg bg-gray-400 flex gap-3 items-center px-4 mt-5  transition">
+            <Phone className="text-white" />
             <input
               type="number"
               placeholder="Phone Number"
-              className="font-poppins font-normal bg-transparent w-full py-3 outline-none"
+              className="font-poppins placeholder-white font-normal bg-transparent w-full py-3 outline-none"
             />
           </div>
 
           {/* Message */}
-          <div className="border bg-white border-gray-300 rounded-lg flex gap-3 items-start px-4 py-3 mt-5 focus-within:border-purple-600 transition">
-            <MessageSquare className="text-gray-500 mt-1" />
+          <div className="border bg-gray-400 border-gray-300   rounded-lg flex gap-3 items-start px-4 py-3 mt-5  transition">
+            <MessageSquare className="text-white mt-1" />
             <textarea
               placeholder="Enter your message"
               rows="4"
-              className="font-poppins font-normal bg-transparent w-full outline-none resize-none"
+              className="font-poppins font-normal placeholder-white bg-transparent w-full outline-none resize-none"
             ></textarea>
           </div>
 

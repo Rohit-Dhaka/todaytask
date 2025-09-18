@@ -72,7 +72,7 @@ const actions = [
   const links = [
     "Home",
     "Products",
-    "About Us",
+    "About",
     "Contact",
     "Blogs",
   
@@ -86,7 +86,7 @@ const actions = [
           <Link to="/" className='font-poppins text-[18px] font-semibold text-white z-20 relative'>STAR TECHNOPLAST</Link>
           
 
-          {/* Menu List */}
+          
           <div
             className={`${
               open ? "left-0" : "left-[-100%]"

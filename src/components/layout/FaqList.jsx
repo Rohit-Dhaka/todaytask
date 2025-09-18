@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { Transition } from "@headlessui/react";
+import { Transition } from "@headlessui/react";
 import { Plus, Minus } from "lucide-react";
 
 import { ChevronDownIcon } from "@heroicons/react/24/solid"; // Make sure you have heroicons installed
@@ -103,44 +103,39 @@ export default function FaqList() {
   If you don’t see your query here, feel free to reach out to us directly.
 </p>
 
+  <div className="grid lg:grid-cols-2 gap-6">
+  {accordionData.map(({ id, title, content }) => {
+    const isOpen = openId === id;
+    return (
+      <div
+        key={id}
+        className={`border  rounded-md overflow-hidden transition-colors duration-300 z-10 relative ${
+          isOpen ? "bg-[#6022EA] text-white" : "bg-[#F6F6F6] text-black"
+        }`}
+      >
+        <button
+          className="w-full flex justify-between items-center  px-[12px] py-[11px]  text-left transition"
+          onClick={() => toggleAccordion(id)}
+        >
+          <span className="font-poppins sm:font-semibold font-medium lg:text-[18px] sm:text-[20px]  leading-[140%]">
+            {title}
+          </span>
+          {isOpen ? (
+            <Minus className={`w-6 h-6 ${isOpen ? "text-white" : "text-gray-700"}`} />
+          ) : (
+            <Plus className={`w-6 h-6 ${isOpen ? "text-white" : ""}`} />
+          )}
+        </button>
 
-        {accordionData.map(({ id, title, content }) => {
-          const isOpen = openId === id;
-          return (
-            <div
-              key={id}
-              className={`border sm:rounded-[14px] rounded-md  z-10 relative  overflow-hidden mt-5 border-[#101A2E] transition-colors duration-300 ${
-                isOpen ? "bg-[#6022EA] text-white" : "bg-[#F6F6F6] text-black"
-              }`}
-            >
-              <button
-                className="w-full flex justify-between items-center  sm:px-[30px] px-[12px] py-[11px]  sm:py-[22px] text-left transition"
-                onClick={() => toggleAccordion(id)}
-              >
-                <span className="font-poppins sm:font-semibold font-medium lg:text-[24px] sm:text-[20px] text-[18px]  leading-[140%]">
-                  {title}
-                </span>
-                {isOpen ? (
-                  <Minus
-                    className={`w-6 h-6 text-gray-700 ${
-                      isOpen ? "text-white" : ""
-                    }`}
-                  />
-                ) : (
-                  <Plus
-                    className={`w-6 h-6   ${isOpen ? " text-white" : " "}`}
-                  />
-                )}
-              </button>
+        <Transition show={isOpen}>
+          <div className="px-[30px] pb-[22px] font-poppins font-normal">{content}</div>
+        </Transition>
+      </div>
+    );
+  })}
+</div>
 
-              <div show={isOpen}>
-                <div className="px-[30px] pb-[22px] font-poppins font-normal">
-                  {content}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+      
       </div>
     </section>
   );

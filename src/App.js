@@ -8,23 +8,31 @@ import Feedback from './components/layout/Feedback';
 import Home from './components/layout/Home';
 import Footer from './components/layout/Footer';
 import Products from './components/layout/Products';
-import { Routes } from 'react-router-dom';
+import { Routes , Route } from 'react-router-dom';
+import Homepage from './Page/Homepage';
+
 
 function App() {
   return (
     <>
-     <Navbar/>
-     <About/>
-     <CustomerEnquiry/>
-     <FaqList/>
-     <Feedback/>
+     {/* <Navbar/>
      <Home/>
-     <Footer/>
      <Products/>
-
-     {/* <Routes>
-      <Route
-     </Routes> */}
+     <About/>
+     <Feedback/>
+     <FaqList/>
+     <CustomerEnquiry/>
+     <Footer/> */}
+    <Navbar/>
+     <Routes>
+     
+      <Route path='/' element={<Homepage/>} />
+      <Route path='/home' element={<Homepage/>} />
+      <Route path='/about' element={<About/>} />
+      <Route path='/contact' element={<CustomerEnquiry/>} />
+      <Route path='/products' element={<Products/>} />
+     </Routes>
+     <Footer/>
      
      </>
 
