@@ -15,14 +15,7 @@ import Homepage from './Page/Homepage';
 function App() {
   return (
     <>
-     {/* <Navbar/>
-     <Home/>
-     <Products/>
-     <About/>
-     <Feedback/>
-     <FaqList/>
-     <CustomerEnquiry/>
-     <Footer/> */}
+  
     <Navbar/>
      <Routes>
      
