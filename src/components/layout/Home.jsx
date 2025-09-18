@@ -34,7 +34,7 @@ const Home = () => {
           <div className=" absolute right-0">
             <Gradienthero/>
           </div>
-            <div className="bg-white  rounded-[12px] w-full max-w-md p-4 z-10 relative">
+            <div className="bg-white  rounded-[12px] w-full max-w-md p-4 z-10">
               <h2 className="text-[24px] font-bold text-white bg-[#6022EA] text-center py-3 rounded-md mb-6">
                 BULK ENQUIRY NOW
               </h2>

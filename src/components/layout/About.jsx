@@ -95,7 +95,7 @@ const About = () => {
       </div>
 
         <div className="flex flex-row flex-wrap mx-[-12px] items-center">
-          <div className="w-7/12 px-3">
+          <div className="lg:w-7/12 w-full px-3 z-10 ">
             <p className="text-white font-poppins text-justify">
               <strong>Startechno Plast</strong> is a trusted name in the mobile
               accessories industry, recognized for delivering high-quality and
@@ -118,7 +118,7 @@ const About = () => {
               creating products that people love and rely on every day.
             </p>
           </div>
-          <div className=" w-5/12 px-3">
+          <div className=" lg:w-5/12 w-full px-3 lg:pt-0 pt-10">
             <Swiper
               modules={[Autoplay]}
               spaceBetween={20}

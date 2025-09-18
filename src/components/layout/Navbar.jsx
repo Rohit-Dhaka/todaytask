@@ -90,7 +90,7 @@ const actions = [
           <div
             className={`${
               open ? "left-0" : "left-[-100%]"
-            } menulist flex duration-300 ease-linear z-10 
+            } menulist flex duration-300 ease-linear  z-20 
             lg:static lg:flex-row lg:items-center lg:justify-center lg:h-auto lg:bg-transparent lg:backdrop-blur-none
             max-lg:fixed max-lg:w-full max-lg:h-screen max-lg:bg-black/95 max-lg:backdrop-blur-md max-lg:top-0 max-lg:flex-col max-lg:items-center max-lg:justify-start max-lg:pt-20`}
             onClick={(e) => {
@@ -240,7 +240,7 @@ const actions = [
                 
                 
                 <li className="lg:pt-6 lg:mt-6 ">
-                  <div className="flex  flex-col ">
+                  <div className="flex  flex-col  max-lg:gap-4">
                     {actions.map((action, i) => (
                       <a
                         key={i}
